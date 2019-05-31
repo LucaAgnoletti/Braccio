@@ -1,0 +1,69 @@
+#include <Braccio.h>
+#include <Servo.h>
+Servo base;
+Servo shoulder;
+Servo elbow;
+Servo wrist_ver;
+Servo wrist_rot;
+Servo gripper;
+
+
+void setup() {
+  Braccio.begin();
+}
+
+
+void loop() {
+                   //(step delay   M1   M2  M3  M4  M5  M6);
+                   //posizione iniziale
+Braccio.ServoMovement(20,          90, 160,120, 90,145,  0);
+delay(3000);
+Braccio.ServoMovement(20,           0, 160,120, 90,145,  0);
+Braccio.ServoMovement(20,           0, 145,140, 90,145,  0);
+Braccio.ServoMovement(20,           8, 145,140, 90,90,  0);
+Braccio.ServoMovement(20,           5, 145,180, 35, 90,  0);
+delay(1000);
+Braccio.ServoMovement(20,           5, 180,180, 30, 90,  0);
+delay(2000);
+Braccio.ServoMovement(20,           9, 180,180, 30,180,  0);
+delay(2000);
+                  //scrollamento1
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,          12, 180,180, 25,180,  0);
+Braccio.ServoMovement(10,           0, 180,180, 25,180,  0);
+delay(5000);      //raccolta
+Braccio.ServoMovement(20,           0, 150,180, 40,180,  0);
+Braccio.ServoMovement(20,           0, 140,180, 50,180,  0);
+Braccio.ServoMovement(20,         180, 130,180, 60,180,  0);
+Braccio.ServoMovement(20,         180, 130,150, 90,180,  0);
+Braccio.ServoMovement(20,         180, 150,120, 90,180,  0);
+                 //scrollamento2
+Braccio.ServoMovement(10,         180, 150,120, 70, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 90, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 70, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 90, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 70, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 90, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 70, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 90, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 70, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 90, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 70, 30,  0);
+Braccio.ServoMovement(10,         180, 150,120, 90, 30,  0);
+delay(3000);     //scarico
+Braccio.ServoMovement(20,         180, 160,120, 90, 90,  0);
+Braccio.ServoMovement(20,         180, 160,120, 90, 90,  0);
+delay(10000);
+}
